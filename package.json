@@ -7,7 +7,13 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "docker:build": "docker build -t mi-app .",
+    "docker:run": "docker run -d -p 3000:3000 mi-app",
+    "docker:dev": "docker-compose up --build",
+    "docker:prod": "docker-compose -f docker-compose.prod.yml up -d",
+    "docker:stop": "docker-compose down",
+    "docker:clean": "docker system prune -f && docker volume prune -f"
   },
   "dependencies": {
     "dotenv": "^17.2.3",
