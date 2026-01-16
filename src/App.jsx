@@ -45,9 +45,10 @@ const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000';
     justifyContent: 'center',
     fontFamily: 'system-ui, sans-serif',
     background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-    color: 'white'
+    color: 'white',
+    minWidth: '100vw'
   }}>
-    <h1>🐳 Docker + React + Node.js</h1>
+    <h1>Counter</h1>
     <div style={{
       background: 'rgba(255,255,255,0.1)',
       padding: '40px',
@@ -74,11 +75,6 @@ const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000';
       >
         {loading ? 'Incrementando...' : 'Incrementar'}
       </button>
-      <div style={{ marginTop: '30px', fontSize: '12px', opacity: 0.7 }}>
-        <p>✅ PostgreSQL (persistencia)</p>
-        <p>✅ Redis (caché)</p>
-        <p>✅ Docker Compose</p>
-      </div>
     </div>
   </div>
 );
